@@ -24,7 +24,8 @@ export default function FileUpload({ onUploadSuccess, setIsLoading, isLoading = 
     try {
       setIsLoading(true);
       setMessage('Processing...');
-      const res = await axios.post('http://localhost:5001/api/upload', formData);
+    //   const res = await axios.post('http://localhost:5001/api/upload', formData);
+      const res = await axios.post('https://creditsea-assignment-kudl.onrender.com/api/upload', formData);
       onUploadSuccess(res.data);
       setMessage('Report generated successfully!');
     } catch (err) {
